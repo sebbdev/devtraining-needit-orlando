@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_58872_needit.validateEmailAdress</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>on  demand script include validating email adress syntax using regular expressions</description>
+        <name>validateEmailAdress</name>
+        <script><![CDATA[function validateEmailAdress (email) {
+	
+	// use JavaScript coercion to guarantee email is a string
+	email = email + '';
+	
+	// compare email against allowed syntax w/ regex
+	// return true if email is a correct email address, otherwise return false
+	if (email.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+		return true;
+	} else {
+		return false;
+	}
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-05 13:16:13</sys_created_on>
+        <sys_id>69fdb5e71b231010aeb4dc6cdc4bcb3e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>validateEmailAdress</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_include_69fdb5e71b231010aeb4dc6cdc4bcb3e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-05 13:16:13</sys_updated_on>
+    </sys_script_include>
+</record_update>
